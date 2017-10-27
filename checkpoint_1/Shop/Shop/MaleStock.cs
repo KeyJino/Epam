@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class SpringAutumn : AShooes
+    public class MaleStock : AStock
     {
-        public SpringAutumn(int size, int price, int materialId) : base(size, price, materialId)
+        public MaleStock()
         {
-            
+
         }
     }
 }

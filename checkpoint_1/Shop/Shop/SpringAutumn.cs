@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace test
 {
-    class Summer : AShooes
+    public class SpringAutumn : AShooes
     {
-        public Summer(int size, int price, int materialId) : base(size, price, materialId)
+        public SpringAutumn(int size, int price, int materialId) : base(size, price, materialId)
         {
             
         }

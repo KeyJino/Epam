@@ -1,0 +1,6 @@
+C:\Comp\University\Programming\C#\Shop\Shop\bin\Debug\Shop.exe.config
+C:\Comp\University\Programming\C#\Shop\Shop\bin\Debug\Shop.exe
+C:\Comp\University\Programming\C#\Shop\Shop\bin\Debug\Shop.pdb
+C:\Comp\University\Programming\C#\Shop\Shop\obj\Debug\Shop.csprojResolveAssemblyReference.cache
+C:\Comp\University\Programming\C#\Shop\Shop\obj\Debug\Shop.exe
+C:\Comp\University\Programming\C#\Shop\Shop\obj\Debug\Shop.pdb

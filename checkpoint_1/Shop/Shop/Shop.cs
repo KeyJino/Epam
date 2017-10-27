@@ -10,14 +10,7 @@ namespace test
     {
         static void Main(string[] args)
         {
-            
-            Service service = new Service();
-
-            
-
-
-          
-
+            new Service();
         }
     }
 }

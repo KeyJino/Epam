@@ -8,7 +8,7 @@ namespace test
 {
     public class Summer : AShooes
     {
-        public Summer(int size, int price, int materialId) : base(size, price, materialId)
+        public Summer(int _size, int _price, int _materialId) : base(_size, _price, _materialId)
         {
             
         }

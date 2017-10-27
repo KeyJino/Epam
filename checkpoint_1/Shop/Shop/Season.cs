@@ -8,7 +8,7 @@ namespace test
 {
     class Season : AShooes
     {
-        public Season(int size, int price, int materialId) : base(size, price, materialId)
+        public Season(int _size, int _price, int _materialId) : base(_size, _price, _materialId)
         {
             
         }

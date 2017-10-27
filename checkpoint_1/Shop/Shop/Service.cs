@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,46 +7,35 @@ namespace test
 {
     public class Service
     {
-        MaleStock _maleStock = new MaleStock();
-        FemaleStock _femaleStock = new FemaleStock();
-        ChildStock _childStock = new ChildStock();
+        private static MaleStock _maleStock = new MaleStock();
+        private static FemaleStock _femaleStock = new FemaleStock();
+        private static ChildStock _childStock = new ChildStock();
 
-        private static Random size = new Random();
-        private static Random price = new Random();
-        private static Random materialId = new Random();
+        private static Random _size = new Random();
+        private static Random _price = new Random();
+        private static Random _materialId = new Random();
 
-        private Winter _winter = new Winter(size.Next(37) + 7, price.Next(50) + 100, materialId.Next(10));
-        private Summer _summer = new Summer(size.Next(37) + 7, price.Next(50) + 100, materialId.Next(10));
-        private SpringAutumn _springAutumn = new SpringAutumn(size.Next(37) + 7, price.Next(50) + 100, materialId.Next(10));
-        private Season _season = new Season(size.Next(37) + 7, price.Next(50) + 100, materialId.Next(10));
+        private Winter _winter = new Winter(_size.Next(37) + 7, _price.Next(50) + 100, _materialId.Next(10));
+        private Summer _summer = new Summer(_size.Next(37) + 7, _price.Next(50) + 100, _materialId.Next(10));
+        private SpringAutumn _springAutumn = new SpringAutumn(_size.Next(37) + 7, _price.Next(50) + 100, _materialId.Next(10));
+        private Season _season = new Season(_size.Next(37) + 7, _price.Next(50) + 100, _materialId.Next(10));
 
         public Service()
         {
             _maleStock.addToStock();
             _maleStock.sorting();
-            _maleStock.complect(_summer, 1500);
+            _maleStock.complect(_summer, 200);
+            _maleStock.seasonsComplect();
 
             _femaleStock.addToStock();
             _femaleStock.sorting();
-            _femaleStock.complect(_summer, 2500);
+            _femaleStock.complect(_summer, 250);
+            _femaleStock.seasonsComplect();
 
             _childStock.addToStock();
             _childStock.sorting();
-            _childStock.complect(_summer, 2500);
+            _childStock.complect(_summer, 250);
+            _childStock.seasonsComplect();
         }
-
-
-        /*
-        public List<AShooes> familyComplect()
-        {
-
-            //do it
-            List<AShooes> temp = new List<AShooes>();
-            temp.Add(_childStock);
-            return temp;
-        }
-        */
-
     }
-
 }

@@ -8,30 +8,30 @@ namespace test
 {
     public abstract class AShooes
     {
-        private int size;
-        private int price;
-        private int materialId;
+        private int _size;
+        private int _price;
+        private int _materialId;
 
-        public AShooes(int size, int price, int materialId)
+        public AShooes(int _size, int _price, int _materialId)
         {
-            this.price = price;
-            this.size = size;
-            this.materialId = materialId;
+            this._price = _price;
+            this._size = _size;
+            this._materialId = _materialId;
         }
 
         public int getSize()
         {
-            return size;
+            return _size;
         }
 
         public int getPrice()
         {
-            return price;
+            return _price;
         }
 
         public int getMaterialID()
         {
-            return materialId;
+            return _materialId;
         }
 
 

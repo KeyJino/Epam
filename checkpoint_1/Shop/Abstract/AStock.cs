@@ -1,31 +1,20 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace test
+
+namespace Epam.Shop.Abstract
 {
     public abstract class AStock
     {
-        private List<AShooes> _shoes = new List<AShooes>();
+        private ICollection<AShooes> _shoes;
+        private ICollection<AShooes> _typeSeason;
         private static Random _random = new Random();
 
-        private List<AShooes> _typeSeason =
-            new List<AShooes>(4){
-                new Season(_random.Next(7) + 37, _random.Next(50) + 100, _random.Next(10)),
-                new Summer(_random.Next(7) + 37, _random.Next(50) + 100, _random.Next(10)),
-                new Winter(_random.Next(7) + 37, _random.Next(50) + 100, _random.Next(10)),
-                new SpringAutumn(_random.Next(7) + 37, _random.Next(50) + 100, _random.Next(10))
-        };
-
-        public void addToStock()
+        public AStock(ICollection<AShooes> typeSeason, ICollection<AShooes> shoes)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                _shoes.Add(_typeSeason[_random.Next(4)]);
-            }
+            _typeSeason = typeSeason;
+            _shoes = shoes;
         }
 
         public void sorting()
@@ -33,9 +22,9 @@ namespace test
             _shoes.OrderBy(x => x.getPrice()).ThenBy(x => x.getMaterialID());
         }
 
-        public List<AShooes> search(int minSize, int maxSize)
+        public ICollection<AShooes> search(int minSize, int maxSize)
         {
-            List<AShooes> _temp = new List<AShooes>();
+            ICollection<AShooes> _temp = new List<AShooes>();
             foreach (var size in _shoes)
             {
                 if (size.getSize() >= minSize && size.getSize() <= maxSize)
@@ -46,10 +35,10 @@ namespace test
             return _temp;
         }
 
-        public List<AShooes> complect(AShooes season, int maxPrice)
+        public ICollection<AShooes> complect(AShooes season, int maxPrice)
         {
             int _sum = 0;
-            List<AShooes> _temp = new List<AShooes>();
+            ICollection<AShooes> _temp = new List<AShooes>();
             foreach (AShooes model in _shoes)
             {
                 if (Object.ReferenceEquals(model.GetType(), season.GetType()) && 
@@ -62,9 +51,9 @@ namespace test
             return _temp;
         }
 
-        public List<AShooes> seasonsComplect()
+        public ICollection<AShooes> seasonsComplect()
         {
-            List<AShooes> _temp = new List<AShooes>();
+            ICollection<AShooes> _temp = new List<AShooes>();
 
             foreach (AShooes _model in _shoes)
             {

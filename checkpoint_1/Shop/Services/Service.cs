@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Epam.Shop.Repository;
+using Epam.Shop.Bins;
+using System;
 
-namespace test
+
+namespace Epam.Shop.Services
 {
     public class Service
     {
-        private static MaleStock _maleStock = new MaleStock();
-        private static FemaleStock _femaleStock = new FemaleStock();
-        private static ChildStock _childStock = new ChildStock();
+        private MaleStock _maleStock = new MaleStock();
+        private FemaleStock _femaleStock = new FemaleStock();
+        private ChildStock _childStock = new ChildStock();
 
         private static Random _size = new Random();
         private static Random _price = new Random();

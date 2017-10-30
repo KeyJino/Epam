@@ -43,18 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AShooes.cs" />
-    <Compile Include="ChildStock.cs" />
-    <Compile Include="FemaleStock.cs" />
-    <Compile Include="MaleStock.cs" />
+    <Compile Include="Abstract\AShooes.cs" />
+    <Compile Include="Interface\IStock.cs" />
+    <Compile Include="Repository\ChildStock.cs" />
+    <Compile Include="Repository\FemaleStock.cs" />
+    <Compile Include="Repository\MaleStock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Season.cs" />
-    <Compile Include="Service.cs" />
-    <Compile Include="Shop.cs" />
-    <Compile Include="SpringAutumn.cs" />
-    <Compile Include="AStock.cs" />
-    <Compile Include="Summer.cs" />
-    <Compile Include="Winter.cs" />
+    <Compile Include="Bins\Season.cs" />
+    <Compile Include="Services\Service.cs" />
+    <Compile Include="Facade\Shop.cs" />
+    <Compile Include="Bins\SpringAutumn.cs" />
+    <Compile Include="Abstract\AStock.cs" />
+    <Compile Include="Bins\Summer.cs" />
+    <Compile Include="Bins\Winter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
